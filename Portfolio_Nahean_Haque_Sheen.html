@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nahean Haque Sheen's Portfolio">
+    <title>Nahean Haque Sheen | Portfolio</title>
+
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Link to Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-image: url('https://github.com/NhSheen/Resume/blob/main/Cover%20Image.png?raw=true'); 
+            background-size: cover;
+            background-position: center;
+            height: 600px; /* Keeps the cover photo large and prominent */
+        }
+
+        .intro-text {
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .intro-text h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #333; /* Text color */
+        }
+
+        .intro-text p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #555; /* Slightly lighter text color */
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 20px;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Added hover effect with scale */
+        }
+
+        nav a:hover {
+            background-color: #f39c12;
+            transform: scale(1.1); /* Grows slightly on hover */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: #f39c12;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .social-links, .contact-info {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .social-links a, .contact-info a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 15px 20px;
+            border-radius: 50px;
+            margin: 10px;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-links a:hover, .contact-info a:hover {
+            background-color: #f39c12;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Video section */
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .video-grid div {
+            flex: 1 1 calc(30% - 20px);
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        .video-grid iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .video-title {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .video-grid a i {
+            font-size: 2em; /* Adjust the size of the icon */
+            color: #0F9D58; /* Google Drive green */
+            margin-right: 10px; /* Space between the icon and text */
+        }
+
+
+        /* New sections */
+        .expertise, .languages, .experience {
+            background-color: #fff;
+            padding: 40px 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .experience li {
+            background-color: #f4f4f4;
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Styling for list items in languages and expertise */
+        .languages ul, .expertise ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .languages li, .expertise li {
+            background-color: #333;
+            color: #fff;
+            margin: 10px;
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-size: 1.1em;
+        }
+
+        /* Hover effect for the lists */
+        .languages li:hover, .expertise li:hover {
+            background-color: #f39c12;
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
+
+        /* Icon styling for Font Awesome */
+        .social-links a i {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <header></header> <!-- Cover photo only -->
+
+    <!-- Text below the cover photo -->
+    <div class="intro-text">
+        <h1>Nahean Haque Sheen</h1>
+        <p>🎬 Video Editor | 🎥 Cinematographer | ✨ Content Creator</p>
+    </div>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#languages">Languages</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p>I am Md. Nahean Haque. I consider myself a skilled photographer, cinematographer, and video editor. My objective is to create impactful visual stories through my work. Whether freezing moments in photography, crafting compelling narratives in cinematography, or enhancing videos through editing, I aim to push creative boundaries and inspire audiences.</p>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">My Projects</h2>
+            <div class="video-grid">
+                <div>
+                    <h3 class="video-title">Project 1: Cinematic Trailer</h3>
+                    <iframe src="https://drive.google.com/file/d/14wD3jV3VPqcPJD7HDzHT5fgOR2lkTukg/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 2: Short Film</h3>
+                    <iframe src="https://drive.google.com/file/d/125VM6rw_mFBxm8Qby0jDTE1SeP9fQlOR/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 3: Pre-Wedding Shoots</h3>
+                    <iframe src="https://drive.google.com/file/d/1s_u-6cYrWVuVp2wftS6ycrbFOBFMmneC/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 4: Sports Documentary</h3>
+                    <iframe src="https://drive.google.com/file/d/1xnaMIvlpzMhgOuEockTkF9MoC4LIJ-De/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 5: School Programes</h3>
+                    <iframe src="https://drive.google.com/file/d/1FNKYuC33NyZUyRR4ooAztmLbN9LgOHdM/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 6: Wedding Highlights</h3>
+                    <iframe src="https://drive.google.com/file/d/1v2hseUzeR8AA2GyVuqaktnvrD5P_-JUZ/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 7: Hindu Wedding Highlights</h3>
+                    <iframe src="https://drive.google.com/file/d/1DMDkpmMLghmsUP5ZUS10ddRZv-kFysRP/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 8: University Rag Day</h3>
+                    <iframe src="https://drive.google.com/file/d/1SYEvrKv7qqwwWmEVKbmbudpSNGlllOd0/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 9: Location/Object Reels</h3>
+                    <iframe src="https://drive.google.com/file/d/127xMd4L0YWh8h871KqrNlxmuFUNhqgIn/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 10: Informative Reels</h3>
+                    <iframe src="https://drive.google.com/file/d/1bVTdzEcsaTJeH4pUV7S1WWRwiR3pnfZj/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 11: Motion Graphics</h3>
+                    <iframe src="https://drive.google.com/file/d/1WXAkGG3Nec6HCQFx1VLewEDGrxWFtZFf/preview" allow="autoplay"></iframe>
+                </div>
+
+                <div>
+                    <h3 class="video-title">Project 12: A glimpse of my works</h3>
+                    <a href="https://drive.google.com/drive/folders/1oObszErYLulgQ3L8x3iS24-05Zcm_AMV?usp=drive_link" target="_blank">
+                        <i class="fab fa-google-drive"></i> View on Google Drive
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- New section: Languages -->
+        <section id="languages" class="languages">
+            <h2 class="section-title">Languages I Speak</h2>
+            <ul>
+                <li>English</li>
+                <li>Bengali</li>
+                <li>Hindi</li>
+            </ul>
+        </section>
+
+        <!-- New section: Expertise -->
+        <section id="expertise" class="expertise">
+            <h2 class="section-title">Areas of Expertise</h2>
+            <ul>
+                <li>Video Editing</li>
+                <li>Cinematography</li>
+                <li>Photography</li>
+                <li>Color Grading</li>
+                <li>Motion Graphics</li>
+                <li>Sound Design</li>
+                <li>Green Screen Video</li>
+            </ul>
+        </section>
+
+        <!-- New section: Experience -->
+        <section id="experience" class="experience">
+            <h2 class="section-title">Experience</h2>
+            <ul>
+                <li><strong>January,2024-June,2024:</strong> Worked as a project based videoeditor at CEMS International for the project “Beautiful Bangladesh” of Bangladesh Tourism Board</li>
+                <li><strong>2022-2023:</strong> Worked as a freelancer/part-time videographer and editor at The Wedding Box BD.</li>
+                <li><strong>2019- :</strong> I have been working as the main cinematographer and video editor at Chitranchollo.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100009196050909" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/nh.sheen/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/nahean-haque-6457862a4/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com/@chitranchollobd2277?si=BXcAksMDEGXjnL3E" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nahean Haque Sheen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
